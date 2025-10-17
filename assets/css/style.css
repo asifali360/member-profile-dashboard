@@ -1014,7 +1014,7 @@ body {
 
 /* === PAGINATION === */
 .pagination {
-	padding: 24px;
+	padding: 24px 0px 0px 0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
