@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Member Profile Dashboard</title>
+      <!-- GOOGLE FONT -->
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+         rel="stylesheet" />
+      <!-- BOOTSTRAP 5 -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+      <!-- FONT AWESOME -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+      <!-- BOOTSTRAP ICONS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+      <!-- fav ICONS -->
+      <link rel="icon" type="image/png" href="assets/img/spark_logo.svg" />
+      <!-- stylesheet css link -->
+      <link rel="stylesheet" href="assets/css/style.css">
+   </head>
+   <body>
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+         <div class="sidebar__logo">
+            <img src="assets/img/spark_logo.svg" alt="Logo" class="img-fluid" id="toggleBtn" />
+         </div>
+         <ul class="sidebar__menu">
+            <li class="sidebar__item_search pt-0">
+               <div class="sidebar__search">
+                  <i class="fa-solid fa-magnifying-glass me-2"></i>
+                  <input type="text" class="sidebar__input" placeholder="Search contact..." />
+               </div>
+            </li>
+            <li class="sidebar__item mt-4">
+               <img src="assets/img/bookmark.svg" alt="" />
+               <span class="sidebar__text">Book Mark</span>
+               <i class="fa-solid fa-angle-right sidebar__icon"></i>
+            </li>
+            <hr class="m-0" />
+            <li class="sidebar__item">
+               <img src="assets/img/dashboard-square.svg" alt="" />
+               <span class="sidebar__text">Dashboard</span>
+               <!-- <i class="fa-solid fa-angle-right sidebar__icon"></i> -->
+            </li>
+            <li class="sidebar__item">
+               <img src="assets/img/user-add.svg" alt="" />
+               <span class="sidebar__text">User Add</span>
+               <!-- <i class="fa-solid fa-angle-right sidebar__icon"></i> -->
+            </li>
+            <li class="sidebar__item">
+               <img src="assets/img/user-group.svg" alt="" />
+               <span class="sidebar__text">Users</span>
+               <i class="fa-solid fa-angle-right sidebar__icon"></i>
+            </li>
+            <li class="sidebar__item">
+               <img src="assets/img/maximim.svg" alt="" />
+               <span class="sidebar__text">Maximim</span>
+               <i class="fa-solid fa-angle-right sidebar__icon"></i>
+            </li>
+            <li class="sidebar__item">
+               <img src="assets/img/discount.svg" alt="" />
+               <span class="sidebar__text">Discount</span>
+               <i class="fa-solid fa-angle-right sidebar__icon"></i>
+            </li>
+            <li class="sidebar__item">
+               <img src="assets/img/note_book.svg" alt="" />
+               <span class="sidebar__text">Note Book</span>
+               <i class="fa-solid fa-angle-right sidebar__icon"></i>
+            </li>
+            <li class="sidebar__item">
+               <img src="assets/img/ranking.svg" alt="" />
+               <span class="sidebar__text">Ranking</span>
+               <i class="fa-solid fa-angle-right sidebar__icon"></i>
+            </li>
+            <li class="sidebar__item">
+               <img src="assets/img/message.svg" alt="" />
+               <span class="sidebar__text">Message</span>
+               <i class="fa-solid fa-angle-right sidebar__icon"></i>
+            </li>
+            <li class="sidebar__item">
+               <img src="assets/img/analytics.svg" alt="" />
+               <span class="sidebar__text">Analytics</span>
+               <i class="fa-solid fa-angle-right sidebar__icon"></i>
+            </li>
+            <li class="sidebar__item">
+               <img src="assets/img/settings.svg" alt="" />
+               <span class="sidebar__text">Settings</span>
+               <i class="fa-solid fa-angle-right sidebar__icon"></i>
+            </li>
+            <li class="sidebar__item">
+               <img src="assets/img/more-or-less.svg" alt="" />
+               <span class="sidebar__text">More</span>
+               <i class="fa-solid fa-angle-right sidebar__icon"></i>
+            </li>
+         </ul>
+      </aside>
+      <!-- MobileSidebar -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar">
+         <div class="offcanvas-header mobile-sidebar-header">
+            <img src="assets/img/spark_logo.svg" alt="Logo" class="mobile-sidebar-logo" />
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+         </div>
+         <div class="offcanvas-body p-0">
+            <ul class="mobile-sidebar-menu list-unstyled m-0 p-2">
+               <li class="mobile-sidebar-item">
+                  <img src="assets/img/bookmark.svg" alt="" />
+                  <span>Book Mark</span>
+                  <i class="fa-solid fa-angle-right sidebar__icon"></i>
+               </li>
+               <hr />
+               <li class="mobile-sidebar-item">
+                  <img src="assets/img/dashboard-square.svg" alt="" />
+                  <span>Dashboard</span>
+                  <!-- <i class="fa-solid fa-angle-right sidebar__icon"></i> -->
+               </li>
+               <li class="mobile-sidebar-item">
+                  <img src="assets/img/user-add.svg" alt="" />
+                  <span>User Add</span>
+                  <!-- <i class="fa-solid fa-angle-right sidebar__icon"></i> -->
+               </li>
+               <li class="mobile-sidebar-item">
+                  <img src="assets/img/user-group.svg" alt="" />
+                  <span>Users</span>
+                  <i class="fa-solid fa-angle-right sidebar__icon"></i>
+               </li>
+               <li class="mobile-sidebar-item">
+                  <img src="assets/img/maximim.svg" alt="" />
+                  <span>Maximim</span>
+                  <i class="fa-solid fa-angle-right sidebar__icon"></i>
+               </li>
+               <li class="mobile-sidebar-item">
+                  <img src="assets/img/discount.svg" alt="" />
+                  <span>Discount</span>
+                  <i class="fa-solid fa-angle-right sidebar__icon"></i>
+               </li>
+               <li class="mobile-sidebar-item">
+                  <img src="assets/img/note_book.svg" alt="" />
+                  <span>Note Book</span>
+                  <i class="fa-solid fa-angle-right sidebar__icon"></i>
+               </li>
+               <li class="mobile-sidebar-item">
+                  <img src="assets/img/ranking.svg" alt="" />
+                  <span>Ranking</span>
+                  <i class="fa-solid fa-angle-right sidebar__icon"></i>
+               </li>
+               <li class="mobile-sidebar-item">
+                  <img src="assets/img/message.svg" alt="" />
+                  <span>Message</span>
+                  <i class="fa-solid fa-angle-right sidebar__icon"></i>
+               </li>
+               <li class="mobile-sidebar-item">
+                  <img src="assets/img/analytics.svg" alt="" />
+                  <span>Analytics</span>
+                  <i class="fa-solid fa-angle-right sidebar__icon"></i>
+               </li>
+               <li class="mobile-sidebar-item">
+                  <img src="assets/img/settings.svg" alt="" />
+                  <span>Settings</span>
+                  <i class="fa-solid fa-angle-right sidebar__icon"></i>
+               </li>
+               <li class="mobile-sidebar-item">
+                  <img src="assets/img/more-or-less.svg" alt="" />
+                  <span>More</span>
+                  <i class="fa-solid fa-angle-right sidebar__icon"></i>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <!-- TOPBAR -->
+      <header class="topbar">
+         <!-- Mobile Toggle -->
+         <button class="btn btn-outline-light d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+         <i class="fa-solid fa-bars"></i>
+         </button>
+         <div class="topbar__search-box ms-2">
+            <i class="fa-solid fa-magnifying-glass me-2 topbar__icon"></i>
+            <input type="text" class="topbar__input" placeholder="Search contact..." />
+         </div>
+         <div class="topbar__icons me-0">
+            <div class="topbar__icon-box "><img src="assets/img/user-add2.svg" alt=""></div>
+            <div class="topbar__icon-box"><img src="assets/img/user-group2.svg" alt=""></div>
+            <div class="topbar__icon-box"><img src="assets/img/elements2.svg" alt=""></div>
+            <div class="topbar__icon-box"><img src="assets/img/calendar1.svg" alt=""></div>
+            <div class="topbar__icon-box"><img src="assets/img/agreement-02.svg" alt=""></div>
+            <div class="topbar__icon-box">
+               <img src="assets/img/message-02.svg" alt="" />
+            </div>
+            <div class="topbar__icon-box"><img src="assets/img/task-01.svg" alt=""></div>
+            <div class="topbar__icon-box"><img src="assets/img/help-square.svg" alt=""></div>
+            <div class="topbar__icon-box topbar__icon-box--notification">
+               <img src="assets/img/notification-02.svg" alt="">
+            </div>
+            <div class="topbar__icon-box"><img src="assets/img/clock-01.svg" alt=""></div>
+            <div class="topbar__icon-box topbar__theme-toggle">
+               <img src="assets/img/moon-02-solid-standard 1.svg" alt="" class="bi-moon">
+               <img src="assets/img/sun-03-stroke-rounded 1.svg" alt="" class="bi-light">
+            </div>
+         </div>
+         </div>
+         <div class="dropdown">
+            <button class="btn d-flex align-items-center user border-0 bg-transparent dropdown-toggle" type="button"
+               id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+               <img src="assets/img/admin_logo.jpg" alt="User" class="user__img" />
+               <div class="text-start ms-2">
+                  <span class="user__name">Savannah Nguyen</span>
+                  <span class="user__role">Admin</span>
+               </div>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+               <li>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="bi bi-person me-2"></i> Profile
+                  </a>
+               </li>
+               <li>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                  <i class="bi bi-gear me-2"></i> Settings
+                  </a>
+               </li>
+               <li>
+                  <hr class="dropdown-divider" />
+               </li>
+               <li>
+                  <a class="dropdown-item d-flex align-items-center text-danger" href="#">
+                  <i class="bi bi-box-arrow-right me-2"></i> Logout
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </header>
+      <!-- MAIN CONTENT LAYOUT -->
+      <main>
+         <div class="container-fluid">
+            <div class="row">
+               <!-- Left Content start-->
+               <div class="col-lg-4 col-md-12 col-12 mb-4 right-sections">
+                  <div class="dashboard__left">
+                     <div class="user">
+                        <div class="user__section">
+                           <div class="image">
+                              <img src="assets/img/image_profile.png" alt="User Profile" class="user__photo img-fluid" />
+                              <div class="user__icon">
+                                 <img src="assets/img/camera.svg" alt="">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <h2 class="title_profile">Max Hollaway</h2>
+                     <a class="quick_actions"><img src="assets/img/get_touch.svg" alt="" class="img-fluid" />
+                     <span class="ms-2">Quick Actions</span>
+                     <img src="assets/img/arrow-up.svg" alt="" class="img-fluid ms-2" /></a>
+                     <!--CREDIT SECTIONS START-->
+                     <div class="credit">
+                        <div class="credit__grid">
+                           <div class="credit__card">
+                              <div class="credit__icon">
+                                 <img src="assets/img/credit-card-add.svg" alt="Add Credit" class="credit__img">
+                              </div>
+                              <div class="credit__link">
+                                 <a href="#">Add Credit</a>
+                              </div>
+                           </div>
+                           <div class="credit__card">
+                              <div class="credit__icon">
+                                 <img src="assets/img/workout-run.svg" alt="Create Workout" class="credit__img">
+                              </div>
+                              <div class="credit__link">
+                                 <a href="#">Create Workout</a>
+                              </div>
+                           </div>
+                           <div class="credit__card">
+                              <div class="credit__icon">
+                                 <img src="assets/img/group_hearts.svg" alt="Show Fitness" class="credit__img">
+                              </div>
+                              <div class="credit__link">
+                                 <a href="#">Show Fitness</a>
+                              </div>
+                           </div>
+                           <div class="credit__card">
+                              <div class="credit__icon">
+                                 <img src="assets/img/printer_cradit.svg" alt="Bar Code Print" class="credit__img">
+                              </div>
+                              <div class="credit__link">
+                                 <a href="#">Bar Code Print</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--ends-->
+                     <!--personal_info -->
+                     <div class="personal_info">
+                        <div><a><i class="bi bi-caret-down-fill"></i><span class="ms-2">Personal Info</span>
+                           </a>
+                        </div>
+                        <div><a><i class="bi bi-pencil-square"></i></a></div>
+                     </div>
+                     <!--contact-info-->
+                     <div class="contact-info">
+                        <div class="contact-info__section">
+                           <div class="contact-info__label">Pronunciation</div>
+                           <div class="contact-info__value"><span class="contact-info__icon"><img src="assets/img/volume-high.svg"
+                              alt=""></span></div>
+                        </div>
+                        <div class="contact-info__section">
+                           <div class="contact-info__label">Using Student App</div>
+                           <div class="contact-info__value"><span class="contact-info__icon"><img src="assets/img/smart-phone.svg"
+                              alt=""></span>No</div>
+                        </div>
+                        <div class="contact-info__section">
+                           <div class="contact-info__label">Mobile Phone</div>
+                           <div class="contact-info__value"><span class="contact-info__icon"><img src="assets/img/smart-phone.svg"
+                              alt=""></span>(473) 555–0927</div>
+                        </div>
+                        <div class="contact-info__section">
+                           <div class="contact-info__label">Mobile Phone #2</div>
+                           <div class="contact-info__value"><a href="#"><img src="assets/img/add-circle.svg" alt=""><span
+                              class="ms-2">add new Phone</span></a></div>
+                        </div>
+                        <div class="contact-info__section">
+                           <div class="contact-info__label">Email Address</div>
+                           <div class="contact-info__value"><a href="#"><span class="contact-info__icon"><img
+                              src="assets/img/mail-02.svg" alt=""></span><span class="ms-2"> izzy@gmail.com</span></a></div>
+                        </div>
+                        <div class="contact-info__section">
+                           <div class="contact-info__label">Email Address #2</div>
+                           <div class="contact-info__value"><a href="#"><img src="assets/img/add-circle.svg" alt=""><span
+                              class="ms-2">add new
+                              Email</span></a>
+                           </div>
+                        </div>
+                     </div>
+                     <!--tags sections-->
+                     <div class="tags_info">
+                        <div><a><i class="bi bi-caret-down-fill"></i><span class="ms-2">Tags</span>
+                           </a>
+                        </div>
+                        <div><a href=""><img src="assets/img/add-01.svg" alt=""></a></div>
+                     </div>
+                     <div class="tags-grid">
+                        <div class="tags-grid__item">
+                           <img class="tags-grid__icon" src="assets/img/tags_arrow.svg" alt="">
+                           <span class="tags-grid__text">benefits-focus</span>
+                        </div>
+                        <div class="tags-grid__item">
+                           <img class="tags-grid__icon" src="assets/img/tags_arrow.svg" alt="">
+                           <span class="tags-grid__text">attended-appointment</span>
+                        </div>
+                        <div class="tags-grid__item">
+                           <img class="tags-grid__icon" src="assets/img/tags_arrow.svg" alt="">
+                           <span class="tags-grid__text">bought-uniform</span>
+                        </div>
+                        <div class="tags-grid__item">
+                           <img class="tags-grid__icon" src="assets/img/tags_arrow.svg" alt="">
+                           <span class="tags-grid__text">interested-in-kungfu</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Right Sidebar -->
+               <div class="col-lg-8 px-0 col-md-12 col-12">
+                  <div class="dashboard__right">
+                     <!-- bar start -->
+                     <div class="main_bar w-100  d-flex overflow-auto justify-content-start  d-lg-block">
+                        <div class="main_bar_menu-grid d-flex flex-nowrap">
+                           <a class="main_bar__item active" href="#" data-id="profile">
+                           <img src="assets/img/user-account.svg" alt="">Profile
+                           </a>
+                           <a class="main_bar__item" href="#" data-id="notes">
+                           <img src="assets/img/notes.svg" alt="">Notes
+                           </a>
+                           <a class="main_bar__item" href="#" data-id="communication">
+                           <img src="assets/img/chatting.svg" alt="">Communication
+                           </a>
+                           <a class="main_bar__item" href="#" data-id="workouts">
+                           <img src="assets/img/workout.svg" alt="">Workouts
+                           </a>
+                           <a class="main_bar__item" href="#" data-id="attendance">
+                           <img src="assets/img/attendance.svg" alt="">Attendance
+                           </a>
+                           <a class="main_bar__item" href="#" data-id="invoice">
+                           <img src="assets/img/inovace.svg" alt="">Invoice
+                           </a>
+                           <a class="main_bar__item" href="#" data-id="ranks">
+                           <img src="assets/img/ranks.svg" alt="">Ranks
+                           </a>
+                        </div>
+                     </div>
+                     <!-- car-grid -->
+                     <div class="car-grid">
+                        <div class="car-grid__item">
+                           <div class="email-card">
+                              <div class="email-card__header">
+                                 <div>
+                                    <span class="email-card__title">Email Sent <br><span>Last 60 days</span></span>
+                                 </div>
+                                 <div class="email-card__icon">
+                                    <img src="assets/img/mail_card.svg" alt="Mail Icon" />
+                                 </div>
+                              </div>
+                              <h3 class="email-card__count">6</h3>
+                              <div class="email-card__stats">
+                                 <span>Opened: 1</span>
+                                 <span>Bounce: 1</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="car-grid__item">
+                           <div class="email-card">
+                              <div class="email-card__header">
+                                 <div>
+                                    <span class="email-card__title">Appointment <br>Booked</span>
+                                 </div>
+                                 <div class="email-card__icon">
+                                    <img src="assets/img/appoint_book.svg" alt="Mail Icon" />
+                                 </div>
+                              </div>
+                              <h3 class="email-card__count">0</h3>
+                              <div class="email-card__stats">
+                                 <span>Showed: 0</span>
+                                 <span>No show: 0</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="car-grid__item">
+                           <div class="email-card">
+                              <div class="email-card__header">
+                                 <div>
+                                    <span class="email-card__title">Total <br>Attendance</span>
+                                 </div>
+                                 <div class="email-card__icon">
+                                    <img src="assets/img/attandence.svg" alt="Mail Icon" />
+                                 </div>
+                              </div>
+                              <h3 class="email-card__count">81</h3>
+                              <div class="email-card__stats">
+                                 <span>Last 7 <br>Days:3</span>
+                                 <span>Last 30 <br>Days:21</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="car-grid__item">
+                           <div class="email-card">
+                              <div class="email-card__header">
+                                 <div><span class="email-card__title">Tasks</span></div>
+                                 <div class="email-card__icon">
+                                    <img src="assets/img/completed-task.svg" alt="Mail Icon" />
+                                 </div>
+                              </div>
+                              <h3 class="email-card__count">3</h3>
+                              <div class="email-card__stats">
+                                 <span>Completed: 3</span>
+                                 <span>Overdue: 3</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="car-grid__item">
+                           <div class="email-card">
+                              <div class="email-card__header">
+                                 <div><span class="email-card__title">Invoices</span></div>
+                                 <div class="email-card__icon">
+                                    <img src="assets/img/invoice.svg" alt="Mail Icon" />
+                                 </div>
+                              </div>
+                              <h3 class="email-card__count">3</h3>
+                              <div class="email-card__stats">
+                                 <span>Completed: 3</span>
+                                 <span>Overdue: 3</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- INVOICES Start-->
+                     <div class="invoice">
+                        <!---invoice-info-->
+                        <div class="invoice-info">
+                           <div class="row invoice__header">
+                              <div class="col-lg-8 invoice__info">
+                                 <h3 class="invoice__title">Invoices / Payments</h3>
+                                 <span class="invoice__count">45 invoices</span>
+                              </div>
+                              <div class="col-lg-4 invoice__actions">
+                                 <button class="invoice__btn"><img src="assets/img/printer.svg" alt=""><span class="ms-2">Print
+                                 Payments</span></button>
+                              </div>
+                           </div>
+                        </div>
+                        <!--tabs-->
+                        <div class="tabs">
+                           <div class="tabs__container">
+                              <nav class="tabs__nav ">
+                                 <div class="nav nav-tabs mb-3" id="tabs-nav" role="tablist">
+                                    <button class="nav-link active tabs__link" id="tabs-home-tab" data-bs-toggle="tab"
+                                       data-bs-target="#tabs-home" type="button" role="tab" aria-controls="tabs-home"
+                                       aria-selected="true">
+                                    Actions
+                                    </button>
+                                    <button class="nav-link tabs__link" id="tabs-profile-tab" data-bs-toggle="tab"
+                                       data-bs-target="#tabs-profile" type="button" role="tab" aria-controls="tabs-profile"
+                                       aria-selected="false">
+                                    Only Paid </button>
+                                    <button class="nav-link tabs__link" id="tabs-contact-tab" data-bs-toggle="tab"
+                                       data-bs-target="#tabs-contact" type="button" role="tab" aria-controls="tabs-contact"
+                                       aria-selected="false">
+                                    Only Paid
+                                    </button>
+                                 </div>
+                              </nav>
+                           </div>
+                        </div>
+                        <!-- Invoice Summary Table -->
+                        <div class="invoice-summary" id="invoiceContent">
+                           <div class="invoice-summary__table-wrapper">
+                              <table class="invoice-summary__table table">
+                                 <thead class="invoice-summary__head">
+                                    <tr>
+                                       <th scope="col" class="invoice-summary__col-date">Date</th>
+                                       <th scope="col" class="invoice-summary__col-details">Invoice Summary</th>
+                                       <th scope="col" class="invoice-summary__col-paid">Amount Paid</th>
+                                       <th scope="col" class="invoice-summary__col-owed">Amount Owed</th>
+                                       <th scope="col" class="invoice-summary__col-action">Action</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody class="invoice-summary__body" id="page1">
+                                    <tr>
+                                       <th scope="row"><span>12/17/2024</span><br><span>11:55am</span></th>
+                                       <td><span>Qty:1, Sparring Gloves</span><br>
+                                          <span>Qty:1, Black Hyper T-Shirt (Small) - Size Small</span> <br>
+                                          <span>Qty:1, White Hyper T-Shirt (Small) - Size Small</span> <br>
+                                          <span>Qty:1, Century Mouth Guard, White</span> <br><br>
+                                          <span><strong>Payments:</strong></span> <br>
+                                          <span>CC Terminal 12/17/2024 - Amt: $125.68</span>
+                                       </td>
+                                       <td><span class="text-white">$125.68</span></td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                    <tr>
+                                       <th scope="row"><span>12/12/2024</span> <br> <span>04:05am</span></th>
+                                       <td>
+                                          <span>Qty:1, Black Hyper T-Shirt (Small) - Size - Small</span><br>
+                                          <span>No payments found.</span><br>
+                                       </td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><span class="text-white">$21.67</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                    <tr>
+                                       <th scope="row"><span>12/10/2024</span> <br> <span>05:47am</span></th>
+                                       <td>
+                                          <span>Qty:1, Century Mouth Guard, Black</span> <br>
+                                          <span>Qty:1, Black Hyper T-Shirt(Small)-Size-Small</span> <br>
+                                          <span>Qty-1, White Hyper T-Shirt (Small)- Size- Small</span>
+                                       </td>
+                                       <td><span class="text-white">$131.11</span></td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                    <tr>
+                                       <th scope="row"><span>10/02/2024</span> <br> <span>03:51am</span></th>
+                                       <td><span>Qty:1, Membership Down Payment</span><br>
+                                          <span>Qty:1, Sanabul Taekwondo Gloves</span><br>
+                                          <span>Qty-1, Century Mouth Gurd, Green</span><br><br>
+                                          <span><strong>Payments:</strong></span> <br>
+                                          <span>CC Terminal 10/12/2024 - Amt: $178.76</span>
+                                       </td>
+                                       <td><span class="text-white">$178.76</span></td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                    <tr>
+                                       <th scope="row"><span>12/12/2024</span> <br><span>11:55am</span>
+                                       </th>
+                                       <td>
+                                          <span>Qty:1, Black Hyper T-Shirt (Small) - Size - Small</span><br>
+                                          <span>No payments found.</span>
+                                       </td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><span class="text-white">$21.67</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                    <tr>
+                                       <th scope="row"><span>12/12/2024</span> <br><span>11:55am</span></th>
+                                       <td> <span> Qty:1, Black Hyper T-Shirt (Small) - Size - Small</span><br>
+                                          <span>No payments found.</span>
+                                       </td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><span class="text-white">$21.67</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                    <tr>
+                                       <th scope="row"><span>12/17/2024</span> <br><span>11:55am</span>
+                                       </th>
+                                       <td>
+                                          <span>Qty:1, Sparring Gloves</span> <br>
+                                          <span>Qty:1, Black Hyper T-Shirt (Small) - Size Small</span> <br>
+                                          <span>Qty:1, White Hyper T-Shirt (Small) - Size Small</span> <br>
+                                          <span>Qty:1, Century Mouth Guard, White</span> <br><br>
+                                          <span><strong>Payments:</strong></span> <br><span>CC Terminal 12/17/2024 - Amt: $125.68</span>
+                                       </td>
+                                       <td><span class="text-white">$125.68</span></td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                 </tbody>
+                                 <tbody id="page2" class="invoice-summary__body" style="display: none;">
+                                    <tr>
+                                       <th scope="row"><span>12/17/2024</span> <br><span>11:55am</span>
+                                       </th>
+                                       <td>
+                                          <span>Qty:1, Sparring Gloves</span> <br>
+                                          <span>Qty:1, Black Hyper T-Shirt (Small) - Size Small</span> <br>
+                                          <span>Qty:1, White Hyper T-Shirt (Small) - Size Small</span> <br>
+                                          <span>Qty:1, Century Mouth Guard, White</span> <br><br>
+                                          <span><strong>Payments:</strong></span> <br><span>CC Terminal 12/17/2024 - Amt: $125.68</span>
+                                       </td>
+                                       <td><span class="text-white">$125.68</span></td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                    <tr>
+                                       <th scope="row"><span>12/12/2024</span> <br><span>04:05am</span>
+                                       </th>
+                                       <td>
+                                          <span>Qty:1, Black Hyper T-Shirt (Small) - Size - Small</span><br>
+                                          <span>No payments found.</span><br>
+                                       </td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><span class="text-white">$21.67</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                    <tr>
+                                       <th scope="row"><span>12/10/2024</span> <br><span>05:47am</span>
+                                       </th>
+                                       <td>
+                                          <span>Qty:1, Century Mouth Guard, Black</span><br>
+                                          <span>Qty:1, Black Hyper T-Shirt(Small)-Size-Small</span><br>
+                                          <span>Qty-1, White Hyper T-Shirt (Small)- Size- Small</span>
+                                       </td>
+                                       <td><span class="text-white">$131.11</span></td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                    <tr>
+                                       <th scope="row"><span>10/02/2024</span> <br><span>03:51am</span>
+                                       </th>
+                                       <td>
+                                          <span>Qty:1, Membership Down Payment</span><br>
+                                          <span>Qty:1, Sanabul Taekwondo Gloves</span><br>
+                                          <span>Qty-1, Century Mouth Gurd, Green</span><br><br>
+                                          <span><strong>Payments:</strong></span> <br><span>CC Terminal 10/12/2024 - Amt: $178.76</span>
+                                       </td>
+                                       <td><span class="text-white">$178.76</span></td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                    <tr>
+                                       <th scope="row"><span>12/12/2024</span> <br><span>11:55am</span>
+                                       </th>
+                                       <td>
+                                          <span>Qty:1, Black Hyper T-Shirt (Small) - Size - Small</span><br>
+                                          <span>No payments found.</span>
+                                       </td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><span class="text-white">$21.67</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                    <tr>
+                                       <th scope="row"><span>12/12/2024</span> <br><span>11:55am</span>
+                                       </th>
+                                       <td>
+                                          <span>Qty:1, Black Hyper T-Shirt (Small) - Size - Small</span><br>
+                                          <span>No payments found.</span>
+                                       </td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><span class="text-white">$21.67</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                    <tr>
+                                       <th scope="row"><span>12/12/2024</span> <br><span>11:55am</span>
+                                       </th>
+                                       <td>
+                                          <span>Qty:1, Membership Down Payment</span><br>
+                                          <span>Qty:1, Sanabul Taekwondo Gloves</span><br>
+                                          <span>Qty-1, Century Mouth Gurd, Green</span><br><br>
+                                          <span><strong>Payments:</strong></span> <br><span>CC Terminal 10/12/2024 - Amt: $178.76</span>
+                                       </td>
+                                       <td><span class="text-white">$125.68</span></td>
+                                       <td><span class="text-white">$0.00</span></td>
+                                       <td><a href="#" class="invoice-summary__action">View</a></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <hr>
+                              <div class="invoice-summary__footer d-flex justify-content-center">
+                                 <span class="invoice-summary__totals">
+                                 <span class="invoice-summary__label">Total Paid:</span>
+                                 <span class="invoice-summary__paid">$8272.28</span>
+                                 <span class="invoice-summary__label ms-4">Total Owed:</span>
+                                 <span class="invoice-summary__owed">$21.67</span>
+                                 </span>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Pagination -->
+                        <ul class="pagination justify-content-center mt-3" id="invoicePagination">
+                           <li class="page-item"><a class="page-link" href="#" data-page="prev">Prev</a></li>
+                           <li class="page-item active"><a class="page-link" href="#" data-page="1">1</a></li>
+                           <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+                           <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
+                           <li class="page-item"><a class="page-link" href="#" data-page="next">Next</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <!-- BOOTSTRAP JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/script.js"></script>
+   </body>
+</html>
