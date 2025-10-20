@@ -385,7 +385,6 @@ body {
 
 /* === dashboard__left side === */
 .dashboard__left {
-	background-color: var(--bg-dark);
 	position: relative;
 	z-index: 999;
 	padding: 20px 0px 0px 20px;
